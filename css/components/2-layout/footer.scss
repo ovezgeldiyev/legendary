@@ -29,7 +29,6 @@
       .copy {
         width: calc(40% - 15px);
         max-width: 338px;
-
       }
     }
   }
@@ -74,7 +73,74 @@
   }
 }
 
+.offers {
+  &__inner {
+    padding: 32px 0 80px;
+    h2 {
+      margin-bottom: 116px;
+    }
+    &-main {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+  }
+  &Item {
+    width: calc(33.3% - 13px);
+    max-width: 546px;
+    padding: 12px;
+    border: 1px dashed $gray2;
+    &__body {
+      padding-bottom: 130%;
+      position: relative;
+      transition: .2s ease;
+      &-image {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+        &::before {
+          content: "";
+          width: 100%;
+          height: 100%;
+          position: absolute;
+          top: 0;
+          left: 0;
+          background: linear-gradient(
+            180deg,
+            rgba(0, 0, 0, 0) 0%,
+            #000000 100%
+          );
+          z-index: 1;
+        }
+        img {
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+          opacity: 0.7;
+        }
+      }
+      &-info {
+        position: absolute;
+        z-index: 2;
+        left: 56px;
+        bottom: 48px;
+        h3 {
+          color: $orange;
+          margin-bottom: 30px;
+          span {
+            display: block;
+          }
+        }
+      }
+      &:hover{
+        padding-bottom: 140%;
+      }
+    }
+  }
+}
 
-.offers{
-    
+.auto__container {
+  max-width: 1760px;
 }
