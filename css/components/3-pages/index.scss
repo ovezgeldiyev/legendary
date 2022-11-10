@@ -1,27 +1,57 @@
 .hero {
     position: relative;
     &__bg {
-        display: flex;
-        justify-content: center;
-        align-items: center;
         position: absolute;
         top: 0;
         left: 0;
         width: 100%;
         height: 100%;
-        opacity: .6;
-        pointer-events: none;
-        img {
-            @include fullImage;
+        &-main {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            opacity: .6;
+            img {
+                @include fullImage;
+            }
         }
+        &-bottom {
+            display: flex;
+            justify-content: center;
+            align-items: flex-end;
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 120px;
+            img {
+                width: 100%;
+            }
+        }
+
     }
     &__inner {
         min-height: 100vh;
+        padding: 80px 0;
         display: flex;
         flex-direction: column;
         justify-content: center;
         &-content {
 
+        }
+        &-row {
+            display: flex;
+            align-items: center;
+            &-content {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+            }
         }
         &-seperator {
             display: flex;
@@ -41,6 +71,15 @@
             color: #C1C1C1;
             margin-bottom: 75px;
         }
+        h5 {
+            margin-bottom: 4px;
+            color: #7E7E7E;
+            &:last-child {
+                margin: 0;
+                color: $white;
+                font-weight: 900;
+            }
+        }
         .button {
             font-size: 25px;
             line-height: 30px;
@@ -48,6 +87,8 @@
             padding: 10px 60px;
             position: relative;
             background: $gradient;
+            font-weight: 700;
+            margin-right: 48px;
             &::before {
                 position: absolute;
                 top: 50%;
@@ -57,8 +98,9 @@
                 background-color: transparent;
                 border: 1px solid $white;
                 opacity: .2;
-                z-index: -1;
                 pointer-events: none;
+                content: "";
+                transform: translate(-50%, -50%)
             }
         }
     }
