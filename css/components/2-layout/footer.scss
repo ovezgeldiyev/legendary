@@ -9,10 +9,10 @@
         display: flex;
         justify-content: space-between;
         margin-bottom: 90px;
-        width: calc(60% - 15px);
+        width: calc(68% - 15px);
       }
       &-buttons {
-        width: calc(40% - 15px);
+        width: calc(32% - 15px);
         max-width: 338px;
         h4 {
           margin-bottom: 35px;
@@ -23,12 +23,16 @@
       display: flex;
       justify-content: space-between;
       &-info {
-        width: calc(60% - 15px);
+        width: calc(68% - 15px);
         color: $gray;
+        font-size: 15px;
+        line-height: 20px;
       }
       .copy {
-        width: calc(40% - 15px);
+        width: calc(32% - 15px);
         max-width: 338px;
+        font-size: 15px;
+        line-height: 20px;
       }
     }
   }
@@ -40,16 +44,24 @@
     a {
       margin-bottom: 20px;
       display: block;
+      font-weight: 400;
     }
   }
 }
 .button {
   margin-right: 13px;
+  padding: 12px 40px;
+  font-family: $cinzel;
+  font-weight: 700;
   &:last-child {
     margin: 0;
   }
   &__row {
     display: flex;
+  }
+  &.secondary {
+    background-color: $gray3;
+    color: $white;
   }
 }
 // 750px
@@ -78,6 +90,23 @@
     padding: 32px 0 80px;
     h2 {
       margin-bottom: 116px;
+      position: relative;
+      text-align: center;
+      padding-bottom: 45px;
+      &:after {
+        content: "";
+        width: 100%;
+        height: 21px;
+        max-width: 774px;
+        background-image: url("../images/separator.png");
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+        position: absolute;
+        bottom: 0;
+        left: 50%;
+        transform: translateX(-50%);
+      }
     }
     &-main {
       display: flex;
@@ -93,7 +122,7 @@
     &__body {
       padding-bottom: 121%;
       position: relative;
-      transition: .2s ease;
+      transition: 0.2s ease;
       &-image {
         position: absolute;
         width: 100%;
@@ -129,18 +158,31 @@
         h3 {
           color: $orange;
           margin-bottom: 30px;
+          font-size: 35px;
+          line-height: 45px;
           span {
             display: block;
+            font-size: 20px;
+            line-height: 26px;
+          }
+        }
+        .button {
+          padding: 11px 22px;
+          cursor: pointer;
+          @include transition;
+          &:hover {
+            opacity: 0.8;
           }
         }
       }
-      &:hover{
+      &:hover {
         padding-bottom: 140%;
       }
     }
   }
 }
-
-.auto__container {
-  max-width: 1760px;
+h4 {
+  font-size: 18px;
+  line-height: 24px;
+  font-weight: 700;
 }
