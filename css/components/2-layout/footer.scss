@@ -90,7 +90,6 @@
     padding: 32px 0 80px;
     h2 {
       margin-bottom: 116px;
-    
     }
     &-main {
       display: flex;
@@ -169,4 +168,114 @@ h4 {
   font-size: 18px;
   line-height: 24px;
   font-weight: 700;
+}
+
+.about {
+  background-image: url("../images/aboutBg.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  &:after{
+    content: "";
+    width: 100%;
+    height: 120px;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    background-image: url("../images/hero-top.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+  }
+  &::before{
+    content: "";
+    width: 100%;
+    height: 120px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-image: url("../images/hero-top.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+  }
+  &__inner {
+    padding: 40px 0 100px;
+    display: flex;
+    flex-direction: column;
+    h2 {
+      margin-bottom: 85px;
+    }
+    p {
+      &.big {
+        text-align: center;
+        max-width: 874px;
+        margin: 0 auto 64px;
+      }
+    }
+    &-main {
+      display: flex;
+      justify-content: space-between;
+    }
+    &-text {
+      display: flex;
+      align-items: center;
+      max-width: 1060px;
+      margin: 0 auto;
+      span {
+        width: 48px;
+        height: 32px;
+        margin-right: 26px;
+        display: block;
+        img {
+          width: 100%;
+          height: 100%;
+          object-fit: contain;
+        }
+      }
+    }
+  }
+  &Item {
+    width: calc(33.3% - 8px);
+    max-width: 547px;
+    padding: 109px 65px;
+    background: linear-gradient(
+      180deg,
+      rgba(0, 0, 0, 0.5) 25.48%,
+      rgba(0, 0, 0, 0) 100%
+    );
+    h3 {
+      margin-bottom: 33px;
+      color: $orange;
+      display: flex;
+      align-items: center;
+      span {
+        margin-right: 18px;
+        width: 71px;
+        height: 71px;
+        img {
+          width: 100%;
+          height: 100%;
+          object-fit: contain;
+        }
+      }
+    }
+  }
+  .button {
+    margin: 0 auto 106px;
+    font-size: 19px;
+    line-height: 25px;
+    padding: 11px 60px;
+    position: relative;
+    &::before {
+      content: "";
+      width: calc(100% + 14px);
+      height: calc(100% + 12px);
+      border: 1px solid rgba(255, 255, 255, 0.2);
+      position: absolute;
+      top: -6px;
+      left: -7px;
+    }
+  }
 }
