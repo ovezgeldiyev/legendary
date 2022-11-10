@@ -4,6 +4,7 @@
   left: 0;
   width: 100%;
   z-index: 10;
+  background-color: $black2;
   &.sticky  {
    position: fixed;
    top: 0;
@@ -13,17 +14,56 @@
    animation-duration: .4s;
   }
   &__inner {
-    padding: 30px 0;
+    padding: 19px 0 16px;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    &-logo {
+    max-width: 1480px;
+    margin-left: auto;
+    &-side {
       display: flex;
-      justify-content: center;
       align-items: center;
-      width: 320px;
-      img {
-        width: 100%;
+  
+      & > span {
+        width: 32px;
+        height: 32px;
+        background-color: #3C4147;
+        border-radius: 50%;
+      }
+      hr {
+        height: 33px;
+        width: 1px;
+        background-color: #26282A;
+        margin: 0 17px;
+      }
+    }
+    &-user {
+      display: flex;
+      align-items: center;
+      font-size: 13px;
+      line-height: 17px;
+      font-weight: 700;
+      color: $white;
+      &-icon {
+        width: 22px;
+        height: 22px;
+        margin-right: 10px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        img {
+          width: 100%;
+        }
+      }
+      span {
+        width: 10px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-left: 12px;
+        img {
+          width: 100%;
+        }
       }
     }
   }
