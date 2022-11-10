@@ -1,29 +1,80 @@
 .footer {
-   
-    
+  padding: 80px 0;
+  &__inner {
+    &-main {
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+      &-links {
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 90px;
+        width: calc(60% - 15px);
+      }
+      &-buttons {
+        width: calc(40% - 15px);
+        max-width: 338px;
+        h4 {
+          margin-bottom: 35px;
+        }
+      }
+    }
+    &-copy {
+      display: flex;
+      justify-content: space-between;
+      &-info {
+        width: calc(60% - 15px);
+        color: $gray;
+      }
+      .copy {
+        width: calc(40% - 15px);
+        max-width: 338px;
+
+      }
+    }
+  }
+  &Link {
+    width: calc(25% - 10px);
+    h4 {
+      margin-bottom: 24px;
+    }
+    a {
+      margin-bottom: 20px;
+      display: block;
+    }
+  }
+}
+.button {
+  margin-right: 13px;
+  &:last-child {
+    margin: 0;
+  }
+  &__row {
+    display: flex;
+  }
 }
 // 750px
-@mixin footer-sm-md  {
-    .footer {
-        
-    }
+@mixin footer-sm-md {
+  .footer {
+  }
 }
 // 650px
-@mixin footer-sm-md-extra  {
-    .footer {
-
-    }
+@mixin footer-sm-md-extra {
+  .footer {
+  }
 }
 // 540px
-@mixin footer-xsm-sm  {
-    .footer {
-  
-        
-    }
+@mixin footer-xsm-sm {
+  .footer {
+  }
 }
 // 390px
-@mixin footer-xxxsm-xxsm  {
-    .footer {
- 
-    }
+@mixin footer-xxxsm-xxsm {
+  .footer {
+  }
+}
+
+
+.offers{
+    
 }
