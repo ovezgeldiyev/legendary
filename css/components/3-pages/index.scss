@@ -144,6 +144,7 @@
 @mixin hero-lg-xlg {
     .hero {
         &__inner {
+            padding: 150px 0 70px;
             h2 {
                 margin-bottom: 40px;
             }
@@ -169,7 +170,14 @@
 // 750px
 @mixin hero-sm-md {
     .hero {
- 
+        &__inner {
+            &-seperator {
+                margin-bottom: 35px;
+                &:last-of-type {
+                    margin-top: 35px;
+                }
+            }
+        }
     }
 }
 // 650px
@@ -181,7 +189,23 @@
 // 540px
 @mixin hero-xsm-sm {
     .hero {
-
+        &__inner {
+            padding: 100px 0 50px;
+            h2 {
+                margin-bottom: 30px;
+            }
+            h5 {
+                font-size: 13px;
+                line-height: 16px;
+                margin: 0;
+            }
+            .button {
+                font-size: 15px;
+                line-height: 16px;
+                padding: 6px 18px;
+                margin-right: 18px;
+            }
+        }
     }
 }
 // 440px
