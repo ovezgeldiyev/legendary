@@ -933,6 +933,9 @@ h4 {
     display: none;
   }
 
+  .hero__inner {
+    padding: 150px 0 70px;
+  }
   .hero__inner h2 {
     margin-bottom: 40px;
   }
@@ -1134,6 +1137,13 @@ h4 {
     line-height: 25px;
   }
 
+  .hero__inner-seperator {
+    margin-bottom: 35px;
+  }
+  .hero__inner-seperator:last-of-type {
+    margin-top: 35px;
+  }
+
   .subheader__inner {
     padding: 7px 0;
   }
@@ -1153,6 +1163,35 @@ h4 {
 
   .auto__container {
     padding: 0 20px;
+  }
+}
+@media (max-width: 540px) {
+  h1 {
+    font-size: 25px;
+    line-height: 30px;
+  }
+
+  h2 {
+    font-size: 17px;
+    line-height: 22px;
+  }
+
+  .hero__inner {
+    padding: 100px 0 50px;
+  }
+  .hero__inner h2 {
+    margin-bottom: 30px;
+  }
+  .hero__inner h5 {
+    font-size: 13px;
+    line-height: 16px;
+    margin: 0;
+  }
+  .hero__inner .button {
+    font-size: 15px;
+    line-height: 16px;
+    padding: 6px 18px;
+    margin-right: 18px;
   }
 }
 /* Slider */
