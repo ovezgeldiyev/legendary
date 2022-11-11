@@ -35,7 +35,19 @@
         }
     }
 }
-
+// 1380px
+@mixin nav-xxxlg-xxxxlg {
+    .nav {
+      &__inner {
+        li {
+            margin-right: 40px;
+            &:first-child {
+                margin-right: 27px;
+            }
+        }
+      }
+    }
+  }
 // 1024px
 @mixin nav-lg-xlg {
     body.active {

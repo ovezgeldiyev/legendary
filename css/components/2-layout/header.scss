@@ -18,6 +18,7 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+    width: 90%;
     max-width: 1480px;
     margin-left: auto;
     &-side {
@@ -128,6 +129,13 @@
         background-color: #E9B121;
         font-weight: 700;
       }
+    }
+  }
+}
+// 1380px
+@mixin header-xxxlg-xxxxlg {
+  .header {
+    &__inner {
     }
   }
 }

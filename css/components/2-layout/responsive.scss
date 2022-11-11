@@ -1,10 +1,14 @@
 // 1450px
 @include xxxxlg-xxxxxlg {
-    // @include hero-xxxxlg-xxxxxlg;
+    // @include header-xxxxlg-xxxxxlg;
 }
 // 1380px
 @include xxxlg-xxxxlg {
     @include hero-xxxlg-xxxxlg;
+    @include header-xxxlg-xxxxlg;
+    @include nav-xxxlg-xxxxlg;
+
+
 }
 // 1250px
 @include xlg-xxlg-extra {
@@ -13,6 +17,9 @@
 // 1180px
 @include xlg-xxlg {
     @include hero-xlg-xxlg;
+    .auto__container {
+        padding: 0 30px;
+    }
 }
 // 1024px
 @include lg-xlg {
