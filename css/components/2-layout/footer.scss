@@ -114,6 +114,7 @@ h4 {
       position: absolute;
       top: -6px;
       left: -7px;
+      pointer-events: none;
     }
   }
 }
@@ -121,6 +122,12 @@ h4 {
 // 1380px
 @mixin about-xxxlg-xxxxlg {
   .about {
+    &__inner{
+      h2{
+        font-size: 37px;
+        line-height: 46px;
+      }
+    }
     &Item {
       padding: 85px 40px;
     }
@@ -159,6 +166,12 @@ h4 {
 // 1024px
 @mixin about-lg-xlg {
   .about {
+    &__inner{
+      h2{
+        font-size: 32px;
+        line-height: 38px;
+      }
+    }
     &Item {
       padding: 60px 20px;
       h3 {
@@ -176,6 +189,11 @@ h4 {
 @mixin about-md-lg {
   .about {
     &__inner {
+      h2{
+        font-size: 28px;
+        line-height: 35px;
+        margin-bottom: 50px;
+      }
       &-main {
         flex-wrap: wrap;
       }
@@ -197,6 +215,18 @@ h4 {
 @mixin about-sm-md-extra {
   .about {
     &__inner {
+      h2{
+        font-size: 25px;
+        line-height: 32px;
+        margin-bottom: 35px;
+      }
+      p{
+        &.big{
+          font-size: 14px;
+          line-height: 19px;
+          margin-bottom: 30px;
+        }
+      }
       &-main {
         justify-content: center;
       }
@@ -207,7 +237,16 @@ h4 {
           margin-right: 15px;
         }
         h5 {
+          font-size: 15px;
+          line-height: 22px;
+          width: calc(100% - 60px);
         }
+      }
+      .button{
+        padding: 10px 50px;
+        font-size: 17px;
+        line-height: 22px;
+        margin-bottom: 70px;
       }
     }
     &Item {
@@ -221,8 +260,70 @@ h4 {
         }
       }
     }
+    
   }
 }
+// 540px
+@mixin about-xsm-sm{
+  .about{
+    &:after{
+      height:38px;
+    }
+    &__inner{
+    padding: 30px 0 50px;
+    h2{
+      padding-bottom:30px;
+      &:after{
+        height: 17px;
+      }
+    }
+    p{
+      &.big{
+        font-size: 13px;
+        line-height: 18px;
+      }
+    }
+    .button{
+      padding: 9px 40px;
+      font-size: 16px;
+      line-height: 20px;
+      margin-bottom: 40px;
+    }
+    &-text{
+      h5 {
+        font-size: 14px;
+        line-height: 19px;
+        width: calc(100% - 50px);
+      }
+    }
+    }
+    
+  }
+}
+
+// 390px
+@mixin about-xxxsm-xxsm{
+  .about{
+    &__inner{
+      h2{
+        font-size: 22px;
+        line-height: 28px;
+        margin-bottom: 20px;
+      }
+      &-text{
+        span{
+          width: 30px;
+          height: 22px;
+        }
+        h5{
+          font-size: 13px;
+          line-height: 17px;
+        }
+      }
+    }
+  }
+}
+
 
 .offers {
   &__inner {
@@ -310,6 +411,11 @@ h4 {
 @mixin offers-xxxlg-xxxxlg {
   .offers {
     &__inner {
+      h2{
+        font-size: 37px;
+        line-height: 46px;
+        margin-bottom: 100px;
+      }
     }
     &Item {
       &__body {
@@ -365,6 +471,13 @@ h4 {
 // 1024px
 @mixin offers-lg-xlg {
   .offers {
+    &__inner{
+      h2{
+        font-size: 32px;
+        line-height: 40px;
+        margin-bottom:70px ;
+      }
+    }
     &Item {
       width: calc(33.3% - 5px);
       padding: 8px;
@@ -395,13 +508,20 @@ h4 {
 @mixin offers-md-lg {
   .offers {
     &__inner {
+      h2{
+        font-size: 28px;
+        line-height: 36px;
+        margin-bottom:50px ;
+
+      }
       &-main {
         flex-wrap: wrap;
       }
     }
     &Item {
       width: calc(50% - 10px);
-      margin-bottom: 20px;
+      margin-bottom: 30px;
+
       &:last-child {
         margin-bottom: 0;
       }
@@ -413,6 +533,11 @@ h4 {
 @mixin offers-sm-md-extra {
   .offers {
     &__inner {
+      padding-bottom: 50px;
+      h2{
+        font-size: 25px;
+        line-height: 32px;
+      }
       &-main {
         justify-content: center;
       }
@@ -433,6 +558,33 @@ h4 {
     }
   }
 }
+// 540px
+@mixin offers-xsm-sm{
+  .offers{
+    &__inner{
+      h2{
+        padding-bottom:30px;
+        &:after{
+          height: 17px;
+        }
+      }
+    }
+  }
+}
+// 390px
+@mixin offers-xxxsm-xxsm{
+  .offers{
+    &__inner{
+      h2{
+        font-size: 22px;
+        line-height: 28px;
+        margin-bottom: 20px;
+      }
+      
+    }
+  }
+}
+
 
 .footer {
   padding: 80px 0;
@@ -520,7 +672,6 @@ h4 {
     }
   }
 }
-
 // 1180px
 @mixin footer-xlg-xxlg {
   .footer {
@@ -586,7 +737,256 @@ h4 {
   }
 
 }
+// 540px
+@mixin footer-xsm-sm{
+.footer{
+  &__inner{
+    &-main{
+      &-links{
+        margin-bottom: 0;
+      }
+      &-buttons{
+        margin-bottom: 40px;
+        h4{
+          margin-bottom: 20px;
+          font-size: 16px;
+          line-height: 20px;
+        }
+      }
+    }
+  }
+  .button{
+    padding: 10px 30px;
+    font-size: 16px;
+    line-height: 18px;
+    &__row{
+      justify-content: center;
+    }
+  }
+}
+}
+// 440px
+@mixin footer-xxsm-xsm{
+  .footer{
+    padding: 20px 0;
+   &Link{
+     h4{
+      font-size: 16px;
+      line-height: 22px;
+      margin-bottom: 20px;
+     }
+     a{
+       font-size: 14px;
+       line-height: 18px;
+     }
+   }
+  }
+}
+// 390px
+@mixin footer-xxxsm-xxsm{
+  .footer{
+    &__inner{
+      &-copy{
+        &-info{
+          font-size: 13px;
+          line-height: 17px;
+          margin-bottom: 15px;
+        }
+        .copy{
+          font-size: 13px;
+          line-height: 17px;
+        }
+      }
+    }
+    &Link{
+    width: 100%;
+    }
+    .button{
+      padding: 10px 20px;
+      font-size: 14px;
+      line-height: 18px;
+      &__row{
+        justify-content: center;
+      }
+    }
+   }
 
+}
+
+
+
+
+// 1380px
+@include xxxlg-xxxxlg {
+  h1 {
+      font-size: 50px;
+      line-height: 65px;
+  }
+  h2 {
+      font-size: 30px;
+      line-height: 45px;
+  }
+  h3 {
+    font-size: 18px;
+    line-height: 26px;
+  }
+  p {
+    &.sm {
+      font-size: 15px;
+      line-height: 23px;
+    }
+  }
+  @include hero-xxxlg-xxxxlg;
+  @include header-xxxlg-xxxxlg;
+  @include nav-xxxlg-xxxxlg;
+  @include nav-xxxlg-xxxxlg;
+@include about-xxxlg-xxxxlg;
+@include offers-xxxlg-xxxxlg;
+@include footer-xxxlg-xxxxlg;
+}
+// 1250px
+@include xlg-xxlg-extra {
+  h1 {
+      font-size: 45px;
+      line-height: 55px;
+  }
+
+  @include hero-xlg-xxlg-extra;
+}
+// 1180px
+@include xlg-xxlg {
+  h1 {
+      font-size: 40px;
+      line-height: 45px;
+  }
+  h2 {
+      font-size: 25px;
+      line-height: 35px;
+  }
+  @include hero-xlg-xxlg;
+  @include header-xlg-xxlg;
+  @include nav-xlg-xxlg;
+  @include about-xlg-xxlg;
+  @include offers-xlg-xxlg;
+  @include footer-xlg-xxlg;
+
+  .auto__container {
+      padding: 0 30px;
+  }
+}
+// 1024px
+@include lg-xlg {
+  ::-webkit-scrollbar{
+      display: none;
+  }
+  h3 {
+    font-size: 17px;
+    line-height: 25px;
+  }
+  p {
+    &.sm {
+      font-size: 14px;
+      line-height: 22px;
+    }
+  }
+  @include hero-lg-xlg;
+  @include header-lg-xlg;
+  @include nav-lg-xlg;
+  @include about-lg-xlg;
+  @include offers-lg-xlg;
+
+  
+}
+// 930px
+@include md-lg {
+  h1 {
+      font-size: 35px;
+      line-height: 40px;
+  }
+  h3{
+    font-size: 16px;
+    line-height: 23px;
+  }
+  h5 {
+    &.big {
+      font-size: 16px;
+      line-height: 24px;
+    }
+  }
+  p {
+    &.big {
+      font-size: 15px;
+      line-height: 22px;
+    }
+  }
+  @include hero-md-lg;
+  @include about-md-lg;
+  @include offers-md-lg;
+}
+// 750px
+@include sm-md {
+  h1 {
+      font-size: 30px;
+      line-height: 35px;
+  }
+  h2 {
+      font-size: 20px;
+      line-height: 25px;
+  }
+  @include hero-sm-md;
+  @include header-sm-md;
+@include footer-sm-md;
+
+
+  .auto__container {
+      padding: 0 20px;
+  }
+}
+// 650px
+@include sm-md-extra {
+  @include hero-sm-md-extra;
+  @include about-sm-md-extra;
+  @include offers-sm-md-extra
+
+
+}
+// 540px
+@include xsm-sm  {
+  h1 {
+      font-size: 25px;
+      line-height: 30px;
+  }
+  h2 {
+      font-size: 17px;
+      line-height: 22px;
+  }
+  h5{
+    &.big{
+      font-size: 15px;
+      line-height: 22px;
+    }
+  }
+  @include hero-xsm-sm;
+  @include about-xsm-sm;
+  @include footer-xsm-sm;
+  @include offers-xsm-sm;
+
+
+}
+// 440px
+@include xxsm-xsm  {
+  @include hero-xxsm-xsm;
+  @include footer-xxsm-xsm;
+
+}
+// 390px
+@include xxxsm-xxsm  {
+  // @include hero-xxxsm-xxsm;
+  @include about-xxxsm-xxsm;
+  @include footer-xxxsm-xxsm;
+  @include offers-xxxsm-xxsm;
+
+}
 
 
 
