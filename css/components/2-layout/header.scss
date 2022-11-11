@@ -75,10 +75,10 @@
 }
 .subheader {
   position: absolute;
-  top: 68px;
+  top: 67px;
   left: 0;
   width: 100%;
-  z-index: 10;
+  z-index: 5;
   &::before {
     position: absolute;
     top: 0;
@@ -92,10 +92,10 @@
   }
   &.sticky  {
    position: fixed;
-   top: 68px;
+   top: 67px;
    left: 0;
    width: 100%;
-   animation-name: sticky;
+   animation-name: sticky2;
    animation-duration: .4s;
   }
   &__inner {
@@ -119,15 +119,17 @@
     &-buttons {
       display: flex;
       align-items: center;
-      .button {
+      a {
         font-size: 13px;
         line-height: 16px;
+        font-weight: 700;
+      }
+      .button {
         color: #090D12;
         padding: 9px 28px;
         margin-left: 20px;
         border-radius: 4px;
         background-color: #E9B121;
-        font-weight: 700;
       }
     }
   }
@@ -136,14 +138,98 @@
 @mixin header-xxxlg-xxxxlg {
   .header {
     &__inner {
+
+    }
+  }
+  .subheader {
+    &__inner {
+      &-links {
+        a {
+          margin-right: 30px;
+        }
+      }
+    }
+  }
+}
+// 1180px
+@mixin header-xlg-xxlg {
+  .header {
+    &__inner {
+      width: 100%;
     }
   }
 }
 // 1024px
 @mixin header-lg-xlg {
     .header {
-    
+      &__inner {
+        padding: 15px 0;
+        &-side {
+          hr {
+            margin: 0 12px;
+          }
+        }
+        &-user {
+          span {
+            margin-left: 10px;
+            width: 8px;
+          }
+        }
+      }
     }
+    .subheader {
+      top: 63px;
+      &.sticky {
+        position: absolute;
+        top: 63px;
+        animation: unset;
+      }
+      &__inner {
+        &-links {
+          a {
+            margin-right: 20px;
+            font-size: 12px;
+            line-height: 14px;
+          }
+        }
+        &-buttons {
+          .button {
+            padding: 7px 20px;
+            margin-left: 16px;
+          }
+        }
+      }
+    }
+}
+// 750px
+@mixin header-sm-md {
+  .header {
+    
+  }
+  .subheader {
+    &__inner{
+      padding: 7px 0;
+      &-links {
+        a {
+          font-size: 11px;
+          line-height: 13px;
+          margin-right: 10px;
+        }
+
+      }
+      &-buttons {
+        a {
+          font-size: 10px;
+          line-height: 12px;
+
+        }
+        .button {
+          margin-left: 8px;
+          padding: 6px 15px;
+        }
+      }
+    }
+  }
 }
 // 540px
 @mixin header-xsm-sm {
@@ -153,11 +239,21 @@
 }
 @keyframes sticky {
     0% {
-      top: -60px;
+      top: -63px;
       opacity: 0;
     }
     100% {
       top: 0;
       opacity: 1;
     }
+}
+@keyframes sticky2 {
+  0% {
+    top: -100px;
+    opacity: 0;
   }
+  100% {
+    top: 67px;
+    opacity: 1;
+  }
+}
