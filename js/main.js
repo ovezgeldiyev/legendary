@@ -1,29 +1,35 @@
-// // menu start
-// var menu = document.getElementById("menu");
-// var menuBtn = document.getElementById("menuBtn");
-// var body = document.body;
-// menuBtn.onclick = function () {
-//   menu.classList.toggle("active");
-//   menuBtn.classList.toggle("active");
-//   body.classList.toggle("active");
-// };
-// window.onclick = function (event) {
-//   if (event.target == menu) {
-//     menu.classList.remove("active");
-//     menuBtn.classList.remove("active");
-//     body.classList.remove("active");
-//   }
-// };
-// // menu end
-// // scroll start
-// let header = document.getElementById("header");
-// function scrollFunc() {
-//   if (window.pageYOffset >= 60) {
-//     header.classList.add("sticky");
-//   } else {
-//     header.classList.remove("sticky");
-//   }
-// }
+// menu start
+var menu = document.getElementById("menu");
+var menuBtn = document.getElementById("menuBtn");
+var body = document.body;
+menuBtn.onclick = function () {
+  menu.classList.toggle("active");
+  menuBtn.classList.toggle("active");
+  body.classList.toggle("active");
+};
+window.onclick = function (event) {
+  if (event.target == menu) {
+    menu.classList.remove("active");
+    menuBtn.classList.remove("active");
+    body.classList.remove("active");
+  }
+};
+// menu end
+// scroll start
+let header = document.getElementById("header");
+let subheader = document.getElementById("subheader");
+
+function scrollFunc() {
+  if (window.pageYOffset >= 60) {
+    header.classList.add("sticky");
+    subheader.classList.add("sticky");
+
+  } else {
+    header.classList.remove("sticky");
+    subheader.classList.remove("sticky");
+
+  }
+}
 // const links = document.querySelectorAll(".links");
 // const sections = document.querySelectorAll(".anchor");
 // function changeLinkState() {
@@ -49,11 +55,11 @@
 //     body.classList.remove("active");
 //   });
 // }
-// window.onscroll = function () {
+window.onscroll = function () {
 //   changeLinkState();
-//   scrollFunc();
-// };
-// // scroll end
+  scrollFunc();
+};
+// scroll end
 // // sliders
 // $(function () {
 //   $(".about__inner-swiper").slick({

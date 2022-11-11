@@ -26,14 +26,19 @@
             line-height: 21px;
             color: $gray;
             text-transform: uppercase;
+            display: flex;
+            align-items: center;
             svg  {
-                width: 8px;
-                height: 8px;
-                margin-left: 4px;
+                width: 9px;
+                height: 9px;
+                margin-left: 8px;
                 fill: $gray
             }
         }
     }
+}
+.burger {
+    display: none;
 }
 // 1380px
 @mixin nav-xxxlg-xxxxlg {
@@ -47,7 +52,20 @@
         }
       }
     }
-  }
+}
+// 1180px
+@mixin nav-xlg-xxlg {
+    .nav {
+      &__inner {
+        li {
+          a {
+            font-size: 14px;
+            line-height: 17px;
+          }
+        }
+      }
+    }
+}
 // 1024px
 @mixin nav-lg-xlg {
     body.active {
@@ -55,13 +73,13 @@
     }
     .nav {
         position: fixed;
-        top: 60px;
+        top: 62px;
         left: 0;
         width: 100%;
-        height: calc(100% - 60px);
+        height: calc(100% - 62px);
         z-index: 9;
         background: rgba($color: #000000, $alpha: 0.4);
-        transform: translateX(100%);
+        transform: translateX(-100%);
         @include transition;
         &.active {
             @include transformReset;
@@ -73,13 +91,27 @@
             align-items: center;
             box-sizing: border-box;
             top: 0;
-            right: 0;
-            width: 100%;
+            left: 0;
+            width: 300px;
             z-index: 1;
             padding: 50px 20px 20px 20px;
             height: 100%;
             overflow-y: auto;
-            background: #FEFEFE;
+            background-color: $black2;
+            li {
+                width: 100%;
+                &:nth-child(n) {
+                    margin: 0 0 20px 0;
+                }
+                &:last-child {
+                    margin: 0;
+                }
+                a {
+                    font-size: 16px;
+                    line-height: 19px;
+                    padding: 10px;
+                }
+            }
         }
     }
     .burger {
@@ -95,8 +127,8 @@
         &::before {
             top: 20%;
             width: 100%;
-            height: 3px;
-            background-color: $black;
+            height: 2px;
+            background-color: $white;
             transition: all 0.3s ease;
             content: "";
             position: absolute;
@@ -106,8 +138,8 @@
         span {
             top: 50%;
             width: 100%;
-            height: 3px;
-            background-color: $black;
+            height: 2px;
+            background-color: $white;
             transition: all 0.3s ease;
             position: absolute;
             left: 50%;
@@ -117,8 +149,8 @@
         &::after {
             bottom: 20%;
             width: 100%;
-            height: 3px;
-            background-color: $black;
+            height: 2px;
+            background-color: $white;
             transition: all 0.3s ease;
             content: "";
             position: absolute;

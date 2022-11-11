@@ -48,22 +48,22 @@
     }
   }
 }
-.button {
-  margin-right: 13px;
-  padding: 12px 40px;
-  font-family: $cinzel;
-  font-weight: 700;
-  &:last-child {
-    margin: 0;
-  }
-  &__row {
-    display: flex;
-  }
-  &.secondary {
-    background-color: $gray3;
-    color: $white;
-  }
-}
+// .button {
+//   margin-right: 13px;
+//   padding: 12px 40px;
+//   font-family: $cinzel;
+//   font-weight: 700;
+//   &:last-child {
+//     margin: 0;
+//   }
+//   &__row {
+//     display: flex;
+//   }
+//   &.secondary {
+//     background-color: $gray3;
+//     color: $white;
+//   }
+// }
 // 750px
 @mixin footer-sm-md {
   .footer {

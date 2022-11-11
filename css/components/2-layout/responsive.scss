@@ -1,9 +1,25 @@
 // 1450px
 @include xxxxlg-xxxxxlg {
+    h1 {
+        font-size: 55px;
+        line-height: 70px;
+    }
+    h2 {
+        font-size: 35px;
+        line-height: 50px;
+    }
     // @include header-xxxxlg-xxxxxlg;
 }
 // 1380px
 @include xxxlg-xxxxlg {
+    h1 {
+        font-size: 50px;
+        line-height: 65px;
+    }
+    h2 {
+        font-size: 30px;
+        line-height: 45px;
+    }
     @include hero-xxxlg-xxxxlg;
     @include header-xxxlg-xxxxlg;
     @include nav-xxxlg-xxxxlg;
@@ -12,11 +28,27 @@
 }
 // 1250px
 @include xlg-xxlg-extra {
+    h1 {
+        font-size: 45px;
+        line-height: 55px;
+    }
+
     @include hero-xlg-xxlg-extra;
 }
 // 1180px
 @include xlg-xxlg {
+    h1 {
+        font-size: 40px;
+        line-height: 45px;
+    }
+    h2 {
+        font-size: 25px;
+        line-height: 35px;
+    }
     @include hero-xlg-xxlg;
+    @include header-xlg-xxlg;
+    @include nav-xlg-xxlg;
+
     .auto__container {
         padding: 0 30px;
     }
@@ -26,15 +58,36 @@
     ::-webkit-scrollbar{
         display: none;
     }
+
     @include hero-lg-xlg;
+    @include header-lg-xlg;
+    @include nav-lg-xlg;
+    
 }
 // 930px
 @include md-lg {
+    h1 {
+        font-size: 35px;
+        line-height: 40px;
+    }
     @include hero-md-lg;
 }
 // 750px
 @include sm-md {
+    h1 {
+        font-size: 30px;
+        line-height: 35px;
+    }
+    h2 {
+        font-size: 20px;
+        line-height: 25px;
+    }
     @include hero-sm-md;
+    @include header-sm-md;
+
+    .auto__container {
+        padding: 0 20px;
+    }
 }
 // 650px
 @include sm-md-extra {
