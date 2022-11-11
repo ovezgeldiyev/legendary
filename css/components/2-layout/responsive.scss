@@ -104,6 +104,9 @@
         line-height: 22px;
     }
     @include hero-xsm-sm;
+    @include header-xsm-sm;
+    @include nav-xsm-sm;
+
 }
 // 440px
 @include xxsm-xsm  {
@@ -111,6 +114,19 @@
 }
 // 390px
 @include xxxsm-xxsm  {
-    // @include hero-xxxsm-xxsm;
+    .auto__container {
+        padding: 0 15px;
+    }
+    h1 {
+        font-size: 20px;
+        line-height: 25px;
+    }
+    h2 {
+        font-size: 15px;
+        line-height: 19px;
+    }
+    @include hero-xxxsm-xxsm;
+    @include header-xxxsm-xxsm;
+
 }
 

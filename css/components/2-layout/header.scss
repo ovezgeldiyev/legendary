@@ -163,7 +163,7 @@
 @mixin header-lg-xlg {
     .header {
       &__inner {
-        padding: 15px 0;
+        padding: 10px 0;
         &-side {
           hr {
             margin: 0 12px;
@@ -178,14 +178,17 @@
       }
     }
     .subheader {
-      top: 63px;
+      top: 53px;
       &.sticky {
         position: absolute;
-        top: 63px;
+        top: 53px;
         animation: unset;
       }
       &__inner {
+        padding: 8px 0;
         &-links {
+          display: flex;
+          align-items: center;
           a {
             margin-right: 20px;
             font-size: 12px;
@@ -203,16 +206,13 @@
 }
 // 750px
 @mixin header-sm-md {
-  .header {
-    
-  }
   .subheader {
     &__inner{
       padding: 7px 0;
       &-links {
         a {
-          font-size: 11px;
-          line-height: 13px;
+          font-size: 10px;
+          line-height: 12px;
           margin-right: 10px;
         }
 
@@ -234,8 +234,87 @@
 // 540px
 @mixin header-xsm-sm {
     .header {
-    
+      &__inner {
+        padding: 8px 0;
+        &-side {
+          & > span {
+            width: 24px;
+            height: 24px;
+          }
+          hr {
+            margin: 0 8px;
+            height: 26px;
+          }
+        }
+        &-user {
+          font-size: 10px;
+          line-height: 12px;
+          &-icon {
+            width: 16px;
+            height: 16px;
+          }
+          span {
+            width: 6px;
+            margin-left: 7px;
+          }
+        }
+      }
     }
+    .subheader {
+      top: 42px;
+      &__inner {
+        padding: 10px 0;
+        &-links {
+          flex-direction: column;
+          align-items: flex-start;
+          a {
+            font-size: 11px;
+            line-height: 13px;
+            margin: 0 0 6px;
+            &:last-child {
+              margin: 0;
+            }
+          }
+        }
+        &-buttons {
+          a {
+            font-size: 11px;
+            line-height: 13px;
+          }
+          .button {
+            padding: 5px 10px;
+            margin-left: 12px;
+          }
+        }
+     
+      }
+    }
+}
+// 390px
+@mixin header-xxxsm-xxsm {
+  .subheader {
+    &__inner {
+      &-links {
+
+        a {
+          font-size: 10px;
+          line-height: 12px;
+          margin: 0 0 4px;
+        }
+      }
+      &-buttons {
+        a {
+          font-size: 10px;
+          line-height: 12px;
+        }
+        .button {
+          padding: 4px 8px;
+          margin-left: 8px;
+        }
+      }
+   
+    }
+  }
 }
 @keyframes sticky {
     0% {
