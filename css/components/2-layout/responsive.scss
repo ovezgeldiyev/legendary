@@ -4,26 +4,47 @@
         font-size: 55px;
         line-height: 70px;
     }
+
     h2 {
         font-size: 35px;
         line-height: 50px;
     }
+
     // @include header-xxxxlg-xxxxxlg;
 }
+
 // 1380px
 @include xxxlg-xxxxlg {
     h1 {
         font-size: 50px;
         line-height: 65px;
     }
+
     h2 {
         font-size: 30px;
         line-height: 45px;
     }
+
+    h3 {
+        font-size: 18px;
+        line-height: 26px;
+    }
+
+    p {
+        &.sm {
+            font-size: 15px;
+            line-height: 23px;
+        }
+    }
+
     @include hero-xxxlg-xxxxlg;
     @include header-xxxlg-xxxxlg;
     @include nav-xxxlg-xxxxlg;
+    @include about-xxxlg-xxxxlg;
+    @include offers-xxxlg-xxxxlg;
+    @include footer-xxxlg-xxxxlg;
 }
+
 // 1250px
 @include xlg-xxlg-extra {
     h1 {
@@ -33,98 +54,168 @@
 
     @include hero-xlg-xxlg-extra;
 }
+
 // 1180px
 @include xlg-xxlg {
     h1 {
         font-size: 40px;
         line-height: 45px;
     }
+
     h2 {
         font-size: 25px;
         line-height: 35px;
     }
+
     @include hero-xlg-xxlg;
     @include header-xlg-xxlg;
     @include nav-xlg-xxlg;
+    @include about-xlg-xxlg;
+    @include offers-xlg-xxlg;
+    @include footer-xlg-xxlg;
 
     .auto__container {
         padding: 0 30px;
     }
 }
+
 // 1024px
 @include lg-xlg {
-    ::-webkit-scrollbar{
+    ::-webkit-scrollbar {
         display: none;
+    }
+
+    h3 {
+        font-size: 17px;
+        line-height: 25px;
+    }
+
+    p {
+        &.sm {
+            font-size: 14px;
+            line-height: 22px;
+        }
     }
 
     @include hero-lg-xlg;
     @include header-lg-xlg;
     @include nav-lg-xlg;
-    
+    @include about-lg-xlg;
+    @include offers-lg-xlg;
 }
+
 // 930px
 @include md-lg {
     h1 {
         font-size: 35px;
         line-height: 40px;
     }
+
+    h3 {
+        font-size: 16px;
+        line-height: 23px;
+    }
+
+    h5 {
+        &.big {
+            font-size: 16px;
+            line-height: 24px;
+        }
+    }
+
+    p {
+        &.big {
+            font-size: 15px;
+            line-height: 22px;
+        }
+    }
+
+    @include about-md-lg;
+    @include offers-md-lg;
     @include hero-md-lg;
 }
+
 // 750px
 @include sm-md {
     h1 {
         font-size: 30px;
         line-height: 35px;
     }
+
     h2 {
         font-size: 20px;
         line-height: 25px;
     }
+
     @include hero-sm-md;
     @include header-sm-md;
+    @include footer-sm-md;
 
     .auto__container {
         padding: 0 20px;
     }
 }
+
 // 650px
 @include sm-md-extra {
     @include hero-sm-md-extra;
+    @include about-sm-md-extra;
+    @include offers-sm-md-extra
 }
+
 // 540px
-@include xsm-sm  {
+@include xsm-sm {
     h1 {
         font-size: 25px;
         line-height: 30px;
     }
+
     h2 {
         font-size: 17px;
         line-height: 22px;
     }
+
+    h5 {
+        &.big {
+            font-size: 15px;
+            line-height: 22px;
+        }
+    }
+
     @include hero-xsm-sm;
     @include header-xsm-sm;
     @include nav-xsm-sm;
+    @include about-xsm-sm;
+    @include footer-xsm-sm;
+    @include offers-xsm-sm;
+}
+
+// 440px
+@include xxsm-xsm {
+    @include hero-xxsm-xsm;
+    @include footer-xxsm-xsm;
 
 }
-// 440px
-@include xxsm-xsm  {
-    @include hero-xxsm-xsm;
-}
+
 // 390px
-@include xxxsm-xxsm  {
+@include xxxsm-xxsm {
     .auto__container {
         padding: 0 15px;
     }
+
     h1 {
         font-size: 20px;
         line-height: 25px;
     }
+
     h2 {
         font-size: 15px;
         line-height: 19px;
     }
+
     @include hero-xxxsm-xxsm;
     @include header-xxxsm-xxsm;
-
+    @include about-xxxsm-xxsm;
+    @include footer-xxxsm-xxsm;
+    @include offers-xxxsm-xxsm;
 }
-
