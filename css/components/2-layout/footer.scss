@@ -815,18 +815,7 @@ h4 {
 
 
 
-// 1450px
-@include xxxxlg-xxxxxlg {
-  h1 {
-      font-size: 55px;
-      line-height: 70px;
-  }
-  h2 {
-      font-size: 35px;
-      line-height: 50px;
-  }
-  // @include header-xxxxlg-xxxxxlg;
-}
+
 // 1380px
 @include xxxlg-xxxxlg {
   h1 {
