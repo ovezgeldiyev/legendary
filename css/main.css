@@ -448,11 +448,13 @@ main {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   position: absolute;
-  top: 100%;
+  top: calc(100% + 4px);
   left: 50%;
-  width: 100%;
-  min-width: 110px;
+  width: 120%;
   overflow: hidden;
   max-height: 0;
   opacity: 0;
@@ -460,10 +462,14 @@ main {
   transition: 0.3s ease;
   background-color: #090D12;
   padding: 8px;
-  border-radius: 10px;
+  border-radius: 6px;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
 }
 .nav__inner-dropdown a {
   padding: 4px;
+  font-size: 12px;
+  line-height: 14px;
 }
 
 .burger {
