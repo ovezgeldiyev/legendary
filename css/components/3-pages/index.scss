@@ -150,16 +150,6 @@
     }
 }
 
-// 1250px
-@mixin hero-xlg-xxlg-extra {
-    .hero {}
-}
-
-// 1180px
-@mixin hero-xlg-xxlg {
-    .hero {}
-}
-
 // 1024px
 @mixin hero-lg-xlg {
     .hero {
@@ -185,11 +175,6 @@
     }
 }
 
-// 930px
-@mixin hero-md-lg {
-    .hero {}
-}
-
 // 750px
 @mixin hero-sm-md {
     .hero {
@@ -203,11 +188,6 @@
             }
         }
     }
-}
-
-// 650px
-@mixin hero-sm-md-extra {
-    .hero {}
 }
 
 // 540px
@@ -524,9 +504,11 @@
 
         &Item {
             width: calc(50% - 10px);
+
             &:last-child {
                 margin: 0 auto 30px;
             }
+
             h3 {
                 span {
                     width: 45px;
@@ -878,6 +860,7 @@
     .offers {
         &__inner {
             padding: 32px 0 50px;
+
             h2 {
                 font-size: 28px;
                 line-height: 36px;
@@ -946,6 +929,7 @@
     .offers {
         &__inner {
             padding: 30px 0;
+
             h2 {
                 padding-bottom: 30px;
 
@@ -968,6 +952,7 @@
             }
 
         }
+
         &Item {
             margin-bottom: 20px;
         }
