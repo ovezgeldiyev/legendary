@@ -1,11 +1,13 @@
 .hero {
     position: relative;
+
     &__bg {
         position: absolute;
         top: 0;
         left: 0;
         width: 100%;
         height: 100%;
+
         &-main {
             display: flex;
             justify-content: center;
@@ -16,10 +18,12 @@
             width: 100%;
             height: 100%;
             opacity: .6;
+
             img {
                 @include fullImage;
             }
         }
+
         &-bottom {
             display: flex;
             justify-content: center;
@@ -29,27 +33,32 @@
             left: 0;
             width: 100%;
             height: 120px;
+
             img {
                 width: 100%;
             }
         }
 
     }
+
     &__inner {
         min-height: 100vh;
         padding: 200px 0 100px;
         display: flex;
         flex-direction: column;
         justify-content: center;
+
         &-row {
             display: flex;
             align-items: center;
+
             &-content {
                 display: flex;
                 flex-direction: column;
                 justify-content: center;
             }
         }
+
         &-seperator {
             width: 19%;
             display: flex;
@@ -58,31 +67,38 @@
             min-width: 218px;
             height: 10px;
             margin-bottom: 80px;
+
             &:last-of-type {
                 margin: 120px 0 0 0;
             }
+
             img {
                 width: 100%;
             }
         }
+
         h2 {
             color: #C1C1C1;
             margin-bottom: 75px;
             padding: 0;
             text-align: left;
+
             &::after {
                 display: none;
             }
         }
+
         h5 {
             margin-bottom: 4px;
             color: #7E7E7E;
+
             &:last-child {
                 margin: 0;
                 color: $white;
                 font-weight: 900;
             }
         }
+
         .button {
             font-size: 25px;
             line-height: 30px;
@@ -92,6 +108,7 @@
             background: $gradient;
             font-weight: 700;
             margin-right: 48px;
+
             &::before {
                 position: absolute;
                 top: 50%;
@@ -108,19 +125,23 @@
         }
     }
 }
+
 // 1380px
 @mixin hero-xxxlg-xxxxlg {
     .hero {
         &__inner {
             &-seperator {
                 margin-bottom: 50px;
+
                 &:last-of-type {
                     margin-top: 50px;
                 }
             }
+
             h2 {
                 margin-bottom: 55px;
             }
+
             .button {
                 padding: 8px 40px;
                 margin-right: 35px;
@@ -128,30 +149,32 @@
         }
     }
 }
+
 // 1250px
 @mixin hero-xlg-xxlg-extra {
-    .hero {
-
-    }
+    .hero {}
 }
+
 // 1180px
 @mixin hero-xlg-xxlg {
-    .hero {
-
-    }
+    .hero {}
 }
+
 // 1024px
 @mixin hero-lg-xlg {
     .hero {
         &__inner {
             padding: 150px 0 70px;
+
             h2 {
                 margin-bottom: 40px;
             }
+
             h5 {
                 font-size: 15px;
                 line-height: 18px;
             }
+
             .button {
                 font-size: 20px;
                 line-height: 22px;
@@ -161,18 +184,19 @@
         }
     }
 }
+
 // 930px
 @mixin hero-md-lg {
-    .hero {
-  
-    }
+    .hero {}
 }
+
 // 750px
 @mixin hero-sm-md {
     .hero {
         &__inner {
             &-seperator {
                 margin-bottom: 35px;
+
                 &:last-of-type {
                     margin-top: 35px;
                 }
@@ -180,25 +204,28 @@
         }
     }
 }
+
 // 650px
 @mixin hero-sm-md-extra {
-    .hero {
-
-    }
+    .hero {}
 }
+
 // 540px
 @mixin hero-xsm-sm {
     .hero {
         &__inner {
             padding: 150px 0 50px;
+
             h2 {
                 margin-bottom: 30px;
             }
+
             h5 {
                 font-size: 13px;
                 line-height: 16px;
                 margin: 0;
             }
+
             .button {
                 font-size: 15px;
                 line-height: 16px;
@@ -208,6 +235,7 @@
         }
     }
 }
+
 // 440px
 @mixin hero-xxsm-xsm {
     .hero {
@@ -216,21 +244,26 @@
             &-seperator {
                 min-width: 170px;
                 margin-bottom: 26px;
+
                 &:last-of-type {
                     margin-top: 26px;
                 }
             }
+
             h2 {
                 margin-bottom: 20px;
             }
+
             h5 {
                 font-size: 12px;
                 line-height: 14px;
             }
+
             .button {
                 font-size: 12px;
                 line-height: 14px;
                 padding: 5px 12px;
+
                 &::before {
                     width: calc(100% + 8px);
                     height: calc(100% + 8px);
@@ -240,6 +273,7 @@
         }
     }
 }
+
 // 390px
 @mixin hero-xxxsm-xxsm {
     .hero {
@@ -248,21 +282,686 @@
             &-row {
                 flex-direction: column;
                 align-items: flex-start;
+
                 &-content {
                     margin-bottom: 15px;
                 }
             }
+
             h2 {
                 margin-bottom: 20px;
             }
+
             h5 {
                 font-size: 12px;
                 line-height: 14px;
             }
+
             .button {
-               order: 2;
-               margin: 0;
+                order: 2;
+                margin: 0;
             }
+        }
+    }
+}
+
+
+.about {
+    background-image: url("../images/aboutBg.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+
+    &:after {
+        content: "";
+        width: 100%;
+        height: 120px;
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        background-image: url("../images/hero-top.png");
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+    }
+
+    // &::before{
+    //   content: "";
+    //   width: 100%;
+    //   height: 120px;
+    //   position: absolute;
+    //   top: 0;
+    //   left: 0;
+    //   background-image: url("../images/hero-top.png");
+    //   background-repeat: no-repeat;
+    //   background-size: cover;
+    //   background-position: center;
+    // }
+    &__inner {
+        padding: 40px 0 100px;
+        display: flex;
+        flex-direction: column;
+
+        h2 {
+            margin-bottom: 85px;
+        }
+
+        p {
+            &.big {
+                text-align: center;
+                max-width: 874px;
+                margin: 0 auto 64px;
+            }
+        }
+
+        &-main {
+            display: flex;
+            justify-content: space-between;
+        }
+
+        &-text {
+            display: flex;
+            align-items: center;
+            max-width: 1060px;
+            margin: 0 auto;
+
+            span {
+                width: 48px;
+                height: 32px;
+                margin-right: 26px;
+                display: block;
+
+                img {
+                    width: 100%;
+                    height: 100%;
+                    object-fit: contain;
+                }
+            }
+
+            h5 {
+                width: calc(100% - 74px);
+            }
+        }
+    }
+
+    &Item {
+        width: calc(33.3% - 8px);
+        max-width: 547px;
+        padding: 109px 65px;
+        background: linear-gradient(180deg,
+                rgba(0, 0, 0, 0.5) 25.48%,
+                rgba(0, 0, 0, 0) 100%);
+
+        h3 {
+            margin-bottom: 33px;
+            color: $orange;
+            display: flex;
+            align-items: center;
+
+            span {
+                margin-right: 18px;
+                width: 71px;
+                height: 71px;
+
+                img {
+                    width: 100%;
+                    height: 100%;
+                    object-fit: contain;
+                }
+            }
+        }
+    }
+
+    .button {
+        margin: 0 auto 106px;
+        font-size: 19px;
+        line-height: 25px;
+        padding: 11px 60px;
+        position: relative;
+        font-weight: 700;
+
+        &::before {
+            content: "";
+            width: calc(100% + 14px);
+            height: calc(100% + 12px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            position: absolute;
+            top: -6px;
+            left: -7px;
+            pointer-events: none;
+        }
+    }
+}
+
+// 1380px
+@mixin about-xxxlg-xxxxlg {
+    .about {
+        &__inner {
+            h2 {
+                font-size: 37px;
+                line-height: 46px;
+            }
+        }
+
+        &Item {
+            padding: 85px 40px;
+        }
+    }
+}
+
+// 1180px
+@mixin about-xlg-xxlg {
+    .about {
+        &__inner {
+            h2 {
+                margin-bottom: 75px;
+            }
+
+            p {
+                &.big {
+                    margin-bottom: 50px;
+                }
+            }
+
+            .button {
+                margin-bottom: 90px;
+            }
+        }
+
+        &Item {
+            padding: 70px 30px;
+
+            h3 {
+                span {
+                    width: 65px;
+                    height: 65px;
+                    margin-right: 15px;
+                }
+            }
+        }
+    }
+}
+
+// 1024px
+@mixin about-lg-xlg {
+    .about {
+        &__inner {
+            h2 {
+                font-size: 32px;
+                line-height: 38px;
+            }
+        }
+
+        &Item {
+            padding: 60px 20px;
+
+            h3 {
+                span {
+                    width: 55px;
+                    height: 55px;
+                    margin-right: 11px;
+                }
+            }
+        }
+    }
+}
+
+// 930px
+@mixin about-md-lg {
+    .about {
+        &__inner {
+            h2 {
+                font-size: 28px;
+                line-height: 35px;
+                margin-bottom: 50px;
+            }
+
+            &-main {
+                flex-wrap: wrap;
+            }
+        }
+
+        &Item {
+            width: calc(50% - 10px);
+
+            h3 {
+                span {
+                    width: 45px;
+                    height: 45px;
+                    margin-right: 11px;
+                }
+            }
+        }
+    }
+}
+
+// 650px
+@mixin about-sm-md-extra {
+    .about {
+        &__inner {
+            h2 {
+                font-size: 25px;
+                line-height: 32px;
+                margin-bottom: 35px;
+            }
+
+            p {
+                &.big {
+                    font-size: 14px;
+                    line-height: 19px;
+                    margin-bottom: 30px;
+                }
+            }
+
+            &-main {
+                justify-content: center;
+            }
+
+            &-text {
+                span {
+                    width: 42px;
+                    height: 28px;
+                    margin-right: 15px;
+                }
+
+                h5 {
+                    font-size: 15px;
+                    line-height: 22px;
+                    width: calc(100% - 60px);
+                }
+            }
+
+            .button {
+                padding: 10px 50px;
+                font-size: 17px;
+                line-height: 22px;
+                margin-bottom: 70px;
+            }
+        }
+
+        &Item {
+            width: 100%;
+            margin-bottom: 10px;
+
+            h3 {
+                span {
+                    width: 45px;
+                    height: 45px;
+                    margin-right: 11px;
+                }
+            }
+        }
+
+    }
+}
+
+// 540px
+@mixin about-xsm-sm {
+    .about {
+        &:after {
+            height: 38px;
+        }
+
+        &__inner {
+            padding: 30px 0 50px;
+
+            h2 {
+                padding-bottom: 30px;
+
+                &:after {
+                    height: 17px;
+                }
+            }
+
+            p {
+                &.big {
+                    font-size: 13px;
+                    line-height: 18px;
+                }
+            }
+
+            .button {
+                padding: 9px 40px;
+                font-size: 16px;
+                line-height: 20px;
+                margin-bottom: 40px;
+            }
+
+            &-text {
+                h5 {
+                    font-size: 14px;
+                    line-height: 19px;
+                    width: calc(100% - 50px);
+                }
+            }
+        }
+
+    }
+}
+
+// 390px
+@mixin about-xxxsm-xxsm {
+    .about {
+        &__inner {
+            h2 {
+                font-size: 22px;
+                line-height: 28px;
+                margin-bottom: 20px;
+            }
+
+            &-text {
+                span {
+                    width: 30px;
+                    height: 22px;
+                }
+
+                h5 {
+                    font-size: 13px;
+                    line-height: 17px;
+                }
+            }
+        }
+    }
+}
+
+
+.offers {
+    &__inner {
+        padding: 32px 0 80px;
+
+        h2 {
+            margin-bottom: 116px;
+        }
+
+        &-main {
+            display: flex;
+            justify-content: space-between;
+        }
+    }
+
+    &Item {
+        width: calc(33.3% - 13px);
+        max-width: 546px;
+        padding: 12px;
+        border: 1px dashed $gray2;
+        transition: 0.4s ease;
+
+        &__body {
+            padding-bottom: 121%;
+            position: relative;
+            transition: .5s ease;
+            height: 100%;
+
+            &-image {
+                position: absolute;
+                width: 100%;
+                height: 100%;
+                top: 0;
+                left: 0;
+
+                &::before {
+                    content: "";
+                    width: 100%;
+                    height: 100%;
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    background: linear-gradient(180deg,
+                            rgba(0, 0, 0, 0) 0%,
+                            #000000 100%);
+                    z-index: 1;
+                    transition: 0.2s ease;
+                }
+
+                img {
+                    width: 100%;
+                    height: 100%;
+                    object-fit: cover;
+                    opacity: 0.7;
+                    transition: 0.2s ease;
+                }
+            }
+
+            &-info {
+                position: absolute;
+                z-index: 2;
+                left: 56px;
+                bottom: 48px;
+
+                h3 {
+                    color: $orange;
+                    margin-bottom: 30px;
+                    font-size: 35px;
+                    line-height: 45px;
+
+                    span {
+                        display: block;
+                        font-size: 20px;
+                        line-height: 26px;
+                    }
+                }
+
+                .button {
+                    padding: 11px 22px;
+                    cursor: pointer;
+                    @include transition;
+                    font-weight: 700;
+
+                    &:hover {
+                        opacity: 0.8;
+                    }
+                }
+            }
+        }
+
+        &:hover {
+            margin: -35px 0;
+        }
+    }
+}
+
+// 1380px
+@mixin offers-xxxlg-xxxxlg {
+    .offers {
+        &__inner {
+            h2 {
+                font-size: 37px;
+                line-height: 46px;
+                margin-bottom: 100px;
+            }
+        }
+
+        &Item {
+            &__body {
+                &-info {
+                    left: 25px;
+                    bottom: 40px;
+                }
+            }
+
+            h3 {
+                font-size: 30px;
+                line-height: 40px;
+
+                span {
+                    font-size: 18px;
+                    line-height: 26px;
+                }
+            }
+
+            .button {
+                padding: 10px 20px;
+                font-size: 16px;
+                line-height: 24px;
+            }
+        }
+    }
+}
+
+// 1180px
+@mixin offers-xlg-xxlg {
+    .offers {
+        &Item {
+            &__body {
+                &-info {
+                    left: 20px;
+                    bottom: 30px;
+                }
+            }
+
+            h3 {
+                font-size: 25px;
+                line-height: 33px;
+                margin-bottom: 20px;
+
+                span {
+                    font-size: 17px;
+                    line-height: 24px;
+                }
+            }
+
+            .button {
+                padding: 9px 18px;
+                font-size: 15px;
+                line-height: 22px;
+            }
+        }
+    }
+}
+
+// 1024px
+@mixin offers-lg-xlg {
+    .offers {
+        &__inner {
+            h2 {
+                font-size: 32px;
+                line-height: 40px;
+                margin-bottom: 70px;
+            }
+        }
+
+        &Item {
+            width: calc(33.3% - 5px);
+            padding: 8px;
+
+            &__body {
+                &-info {
+                    left: 20px;
+                }
+            }
+
+            h3 {
+                font-size: 23px;
+                line-height: 28px;
+                margin-bottom: 15px;
+
+                span {
+                    font-size: 16px;
+                    line-height: 22px;
+                }
+            }
+
+            .button {
+                padding: 9px 18px;
+                font-size: 14px;
+                line-height: 18px;
+            }
+        }
+    }
+}
+
+// 930px
+@mixin offers-md-lg {
+    .offers {
+        &__inner {
+            h2 {
+                font-size: 28px;
+                line-height: 36px;
+                margin-bottom: 50px;
+
+            }
+
+            &-main {
+                flex-wrap: wrap;
+            }
+        }
+
+        &Item {
+            width: calc(50% - 10px);
+            margin-bottom: 30px;
+
+            &:hover {
+                margin: 0 0 30px 0;
+            }
+
+            &:last-child {
+                margin-bottom: 0;
+            }
+        }
+    }
+}
+
+// 650px
+@mixin offers-sm-md-extra {
+    .offers {
+        &__inner {
+            padding-bottom: 50px;
+
+            h2 {
+                font-size: 25px;
+                line-height: 32px;
+            }
+
+            &-main {
+                justify-content: center;
+            }
+        }
+
+        &Item {
+            width: 100%;
+
+            &__body {
+                padding-bottom: 100%;
+
+                &-info {
+                    width: 100%;
+                    top: 50%;
+                    bottom: unset;
+                    left: 50%;
+                    transform: translate(-50%, -50%);
+                    text-align: center;
+                }
+            }
+        }
+    }
+}
+
+// 540px
+@mixin offers-xsm-sm {
+    .offers {
+        &__inner {
+            h2 {
+                padding-bottom: 30px;
+
+                &:after {
+                    height: 17px;
+                }
+            }
+        }
+    }
+}
+
+// 390px
+@mixin offers-xxxsm-xxsm {
+    .offers {
+        &__inner {
+            h2 {
+                font-size: 22px;
+                line-height: 28px;
+                margin-bottom: 20px;
+            }
+
         }
     }
 }
