@@ -524,7 +524,9 @@
 
         &Item {
             width: calc(50% - 10px);
-
+            &:last-child {
+                margin: 0 auto 30px;
+            }
             h3 {
                 span {
                     width: 45px;
@@ -875,6 +877,7 @@
 @mixin offers-md-lg {
     .offers {
         &__inner {
+            padding: 32px 0 50px;
             h2 {
                 font-size: 28px;
                 line-height: 36px;
@@ -896,7 +899,8 @@
             }
 
             &:last-child {
-                margin-bottom: 0;
+                margin: 0 auto;
+
             }
         }
     }
@@ -941,6 +945,7 @@
 @mixin offers-xsm-sm {
     .offers {
         &__inner {
+            padding: 30px 0;
             h2 {
                 padding-bottom: 30px;
 
@@ -962,6 +967,9 @@
                 margin-bottom: 20px;
             }
 
+        }
+        &Item {
+            margin-bottom: 20px;
         }
     }
 }
